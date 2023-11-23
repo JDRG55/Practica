@@ -1,0 +1,37 @@
+<div class="flex align-items-center justify-content-end bg-cyan-100">
+    <a pButton pRipple label="Crear ejemplares" icon="pi pi-user-plus" class="bg-cyan-600" [routerLink]="['/crearAutor']">
+    </a>
+  </div>
+  <div>
+    <p-toast></p-toast>
+  </div>
+
+<p-table [value]="autor">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>ID</th>
+            <th>nombreAutor</th>
+         
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-autor>
+        <tr>
+            <td>{{autor.id}}</td>
+            <td>{{autor.nombreAutor}}</td>
+            <td>{{autor.createdAt}}</td>
+            <td>{{autor.updatedAt}}</td>
+           
+        </tr>
+
+         <!-- <td>
+            <a pButton pRipple icon="pi pi-sync" class="bg-cyan-600 mr-1" [routerLink]="['/actualizarEjemplares', ejemplares.id]">
+            </a>
+            <p-button icon="pi pi-sync" styleClass="p-button-success"></p-button> 
+    
+            <button type="button" pButton pRipple icon="pi pi-times" class="bg-cyan-600 mr-1"   (click)="eliminar(ejemplares.id)">
+            </button>
+
+            
+        </td> -->
+    </ng-template>
+</p-table>

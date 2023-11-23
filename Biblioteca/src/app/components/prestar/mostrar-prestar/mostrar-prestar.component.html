@@ -1,0 +1,39 @@
+<div class="flex align-items-center justify-content-end bg-cyan-100">
+    <a pButton pRipple label="Crear Producto" icon="pi pi-user-plus" class="bg-cyan-600" [routerLink]="['/crearPrestar']">
+    </a>
+  </div>
+  <div>
+    <p-toast></p-toast>
+  </div>
+
+  <p-table [value]="prestar">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>ID</th>
+            <th>fecha_devPrestar</th>
+            <th>fecha_prestPrestar</th>
+            <th>usuarioId</th>
+            <th>ejemplaresId</th>
+                
+    </ng-template>
+    <ng-template pTemplate="body" let-prestar>
+        <tr>
+            <td>{{prestar.id}}</td>
+            <td>{{prestar.fecha_devPrestar}}</td>
+            <td>{{prestar.fecha_prestPrestar}}</td>
+            <td>{{prestar.UsuarioId}}</td>
+            <td>{{prestar.ejemplaresId}}</td>          
+                       
+        </tr> 
+        <!-- <td>
+            <a pButton pRipple icon="pi pi-sync" class="bg-cyan-600 mr-1" [routerLink]="['/productos/edit/', producto.id]">
+            </a>
+            <p-button icon="pi pi-sync" styleClass="p-button-success"></p-button> 
+    
+            <button type="button" pButton pRipple icon="pi pi-times" class="bg-cyan-600 mr-1"   (click)="eliminar(producto.id)">
+            </button>
+
+            
+        </td> -->
+    </ng-template>
+</p-table>
